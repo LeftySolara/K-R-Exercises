@@ -11,13 +11,13 @@ main()
     upper = 300;    /* upper limit */
     step = 20;      /* step size */
 
-    celsius = lower;
+    celsius = upper;
 
     printf("Celsius to Fahrenheit Table\n");
     printf("---------------------------\n");
-    while (celsius <= upper) {
+    while (celsius >= lower) {
         fahr = (9.0/5.0) * celsius + 32.0;
         printf("%3.0f %6.2f\n", celsius, fahr);
-        celsius = celsius + step;
+        celsius = celsius - step;
     }
 }
